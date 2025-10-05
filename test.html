@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="max-w-sm m-auto">
+    
+<form method="post" class="px-1">
+    
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend"><label for="name" class="block">Name:</label></legend>
+            
+                <input type="text" name="name" id="name" class="input">
+            
+        </fieldset>
+    
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend"><label for="surname" class="block">Surname:</label></legend>
+            
+                <input type="text" name="surname" id="surname" class="input">
+            
+        </fieldset>
+    
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend"><label for="birthdate" class="block">Birthdate:</label></legend>
+            
+                <input type="date" name="birthdate" id="birthdate" class="input">
+            
+        </fieldset>
+    
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend"><label for="gender" class="block">Gender:</label></legend>
+            
+                <input type="text" name="gender" id="gender" class="input">
+            
+        </fieldset>
+    
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend"><label for="subscribed" class="block">Subscribed:</label></legend>
+            
+                <label class="label">
+                    <input type="checkbox" name="subscribed" id="subscribed" class="checkbox"> subscribed
+                </label>
+            
+        </fieldset>
+    
+    <br>
+    <input type="submit" value="Submit" class="btn">
+</form>
+
+</body>
+
+</html>

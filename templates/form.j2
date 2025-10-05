@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post" class="px-1">
+    {% for field, props in schema.items() %}
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend"><label for="{{ field }}" class="block">{{ field | capitalize }}:</label></legend>
+            {% if props.type == "string" and props.format == "date" %}
+                <input type="date" name="{{ field }}" id="{{ field }}" class="input">
+            {% elif props.type == "boolean" %}
+                <label class="label">
+                    <input type="checkbox" name="{{ field }}" id="{{ field }}" class="checkbox"> {{ field }}
+                </label>
+            {% elif props.enum is defined %}
+                {% for option in props.enum %}
+                    <input type="radio" name="{{ field }}" value="{{ option }}"> {{ option }}
+                {% endfor %}
+            {% else %}
+                <input type="text" name="{{ field }}" id="{{ field }}" class="input">
+            {% endif %}
+        </fieldset>
+    {% endfor %}
+    <br>
+    <input type="submit" value="Submit" class="btn">
+</form>
+<script>
+    
+</script>
+{% endblock %}
