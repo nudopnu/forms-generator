@@ -20,7 +20,7 @@ The `main.py` contains a sample to experiment with.
 python main.py
 ```
 
-# Roadmap
+## Roadmap
 
 - [ ] front-end validation (probably with [jsonschema](https://www.jsdelivr.com/package/npm/jsonschema))
 - [ ] add ability to add restful API endpoints (probably via [FastAPI](https://fastapi.tiangolo.com/))
